@@ -19,6 +19,7 @@ use App\Http\Controllers\AddOnsController;
 use App\Http\Controllers\WithoutController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\ComplaintController;
+use App\Http\Controllers\PaymentController;
 
 
 
@@ -317,6 +318,8 @@ Route::get('getDeliveryWorker', 'AuthController@getDeliveryWorker')->middleware(
 
 Route::get('getComplaintByWorker/{id}', 'ComplaintController@getComplaintByWorker')->middleware('Delivery_manger');
 
+
+Route::post('createOrder', 'PaymentController@createOrder');
 
 
 });
